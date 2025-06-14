@@ -24,6 +24,7 @@ public class GrupoControlador {
         return grupoRepositorio.obtenerTodosLosGrupos();
     }
 
+    
     // 🔍 Endpoint filtrado: búsqueda por nombre, descripción, tema y paginación
     @GetMapping
     public ResponseEntity<List<GrupoResumenDTO>> buscarGrupos(
