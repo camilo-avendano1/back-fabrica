@@ -29,7 +29,7 @@ public class PublicacionController {
 
         // int idUsuario = new Random().nextInt(14) + 1; // genera de 1 a 14 inclusive
         // // Simulación de usuario fijo
-        int idUsuario = 1;  // Simulación de usuario fijo
+        int idUsuario = 2;  // Simulación de usuario fijo
 
         if (!usuarioGrupoRepo.existsByIdGrupoAndIdUsuario(idGrupo, idUsuario)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN)
@@ -73,12 +73,21 @@ public class PublicacionController {
             return ResponseEntity.status(HttpStatus.CREATED).body(resultado);
 
         } catch (Exception e) {
-            // Opcional: loguear el error para análisis
-            e.printStackTrace();
+            String mensaje = e.getMessage();
 
-            // Devuelve un mensaje genérico o el detalle si estás en modo dev
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Error al publicar el contenido: " + e.getMessage());
+            if (mensaje != null) {
+                // Extraer la frase exacta después de "[ERROR:" si existe
+                int inicio = mensaje.indexOf("[ERROR:");
+                if (inicio != -1) {
+                    mensaje = mensaje.substring(inicio + 7).trim(); // Salta "[ERROR:"
+                    int saltoLinea = mensaje.indexOf("\n");
+                    if (saltoLinea != -1) {
+                        mensaje = mensaje.substring(0, saltoLinea).trim();
+                    }
+                }
+            }
+
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(mensaje);
         }
 
     }
