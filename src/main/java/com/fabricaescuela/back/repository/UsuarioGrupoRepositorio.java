@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UsuarioGrupoRepositorio extends JpaRepository<UsuarioGrupo, Long> {
-    boolean existsByIdGrupoAndIdUsuario(Long idGrupo, Long idUsuario);
+    boolean existsByIdGrupoAndIdUsuario(Long idGrupo, int idUsuario);
 }

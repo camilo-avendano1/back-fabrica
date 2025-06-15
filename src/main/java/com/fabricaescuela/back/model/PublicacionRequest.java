@@ -1,17 +1,32 @@
 package com.fabricaescuela.back.model;
 
 public class PublicacionRequest {
-    private String contenidoTexto;
+    private String texto;
     private String url;
-    private String archivoImagen; // Aquí puedes enviar una cadena base64 si luego vas a manejar imágenes
+    private String tipo;
 
     // Getters y Setters
-    public String getContenidoTexto() { return contenidoTexto; }
-    public void setContenidoTexto(String contenidoTexto) { this.contenidoTexto = contenidoTexto; }
+    public String getTexto() {
+        return texto;
+    }
 
-    public String getUrl() { return url; }
-    public void setUrl(String url) { this.url = url; }
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
 
-    public String getArchivoImagen() { return archivoImagen; }
-    public void setArchivoImagen(String archivoImagen) { this.archivoImagen = archivoImagen; }
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 }
