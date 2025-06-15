@@ -5,7 +5,6 @@ public class PublicacionRequest {
     private String url;
     private String tipo;
 
-    // Getters y Setters
     public String getTexto() {
         return texto;
     }
