@@ -50,3 +50,4 @@ class UsuarioGrupoTest {
         assertNull(usuarioGrupo.getEstado());
     }
 }
+
