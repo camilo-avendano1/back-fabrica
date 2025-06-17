@@ -1,10 +1,13 @@
 package com.fabricaescuela.back.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "tbl_publicaciones")
+@Data
 public class Publicacion {
 
     @Id

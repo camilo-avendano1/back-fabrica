@@ -18,7 +18,7 @@ public class UsuarioGrupoController {
     private final UsuarioGrupoRepositorio usuarioGrupoRepo;
 
     @PersistenceContext
-    private EntityManager entityManager;
+    EntityManager entityManager;
 
     public UsuarioGrupoController(UsuarioGrupoRepositorio usuarioGrupoRepo) {
         this.usuarioGrupoRepo = usuarioGrupoRepo;

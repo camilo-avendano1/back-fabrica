@@ -1,8 +1,10 @@
 package com.fabricaescuela.back.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
+@Data
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -11,5 +13,5 @@ public class Usuario {
     private String nombre;
     private String correo;
     
-    // Getters y setters
+
 }

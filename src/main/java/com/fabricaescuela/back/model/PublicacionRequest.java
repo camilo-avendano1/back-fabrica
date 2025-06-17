@@ -1,5 +1,6 @@
 package com.fabricaescuela.back.model;
 
+
 public class PublicacionRequest {
     private String texto;
     private String url;

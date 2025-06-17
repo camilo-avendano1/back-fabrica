@@ -1,10 +1,13 @@
 package com.fabricaescuela.back.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "tbl_usuarios_por_grupos")
+@Data
 public class UsuarioGrupo {
 
     @Id
