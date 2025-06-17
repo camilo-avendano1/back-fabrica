@@ -89,8 +89,7 @@
 						</goals>
 						<configuration>
 							<excludes>
-								<!-- ❌ Modelos (DTOs, entidades) -->
-								<exclude>com/fabricaescuela/back/model/**</exclude>
+
 								<!-- ❌ Repositorios (interfaces sin lógica) -->
 								<exclude>com/fabricaescuela/back/repository/**</exclude>
 								<!-- ❌ Código generado por Lombok (por si se analiza .class) -->
