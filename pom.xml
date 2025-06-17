@@ -89,11 +89,6 @@
 						</goals>
 						<configuration>
 							<excludes>
-
-								<!-- ❌ Repositorios (interfaces sin lógica) -->
-								<exclude>com/fabricaescuela/back/repository/**</exclude>
-								<!-- ❌ Código generado por Lombok (por si se analiza .class) -->
-								<exclude>**/*$*.class</exclude>
 							</excludes>
 						</configuration>
 					</execution>
@@ -102,3 +97,4 @@
 		</plugins>
 	</build>
 </project>
+
